@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TicTacToe" translatesAutoresizingMaskIntoConstraints="NO" id="lD8-BP-XVw">
-                                <rect key="frame" x="20" y="276" width="375" height="318"/>
+                                <rect key="frame" x="19" y="277" width="375" height="318"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIH-9F-4Lv" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
@@ -85,40 +85,6 @@
                                     <action selector="actionOfButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="STR-cm-8aY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KlW-0a-QAl" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
-                                <rect key="frame" x="28" y="286" width="105" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="🤪">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="row">
-                                        <integer key="value" value="0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="col">
-                                        <integer key="value" value="0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="actionOfButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sSL-iC-W8s"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuV-me-eyO" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
-                                <rect key="frame" x="157" y="286" width="104" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="😍"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="row">
-                                        <integer key="value" value="0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="col">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="actionOfButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="apF-Rm-kYM"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmL-0E-g92" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
                                 <rect key="frame" x="28" y="393" width="105" height="87"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -144,7 +110,7 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="restartGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nIu-WT-J6U"/>
+                                    <action selector="Restart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BjA-Dt-D8M"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwc-tN-OG1" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
@@ -180,7 +146,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MzB-4R-8wi" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
-                                <rect key="frame" x="279" y="286" width="104" height="90"/>
+                                <rect key="frame" x="279" y="285" width="104" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="😝"/>
                                 <userDefinedRuntimeAttributes>
@@ -193,6 +159,40 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="actionOfButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tbJ-eX-aQm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KlW-0a-QAl" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
+                                <rect key="frame" x="28" y="285" width="105" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="🤪">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="row">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="col">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="actionOfButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sSL-iC-W8s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuV-me-eyO" customClass="GameButton" customModule="TicTacToe" customModuleProvider="target">
+                                <rect key="frame" x="157" y="285" width="104" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="😍"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="row">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="col">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="actionOfButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="apF-Rm-kYM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -210,7 +210,7 @@
                         <outlet property="button8" destination="aMa-C3-LlT" id="RdY-h8-Lpy"/>
                         <outlet property="button9" destination="zIH-9F-4Lv" id="4bA-H5-j01"/>
                         <outlet property="lable" destination="2EG-sg-ZJC" id="e3j-fj-GXu"/>
-                        <outlet property="restartGame" destination="XeO-7T-Jdp" id="MRc-Lj-oHg"/>
+                        <outlet property="restartGame" destination="XeO-7T-Jdp" id="0VE-PU-gvx"/>
                         <outletCollection property="arrOFUIButtons" destination="KlW-0a-QAl" collectionClass="NSMutableArray" id="5X7-5s-YLR"/>
                         <outletCollection property="arrOFUIButtons" destination="yuV-me-eyO" collectionClass="NSMutableArray" id="hqV-Ao-BPu"/>
                         <outletCollection property="arrOFUIButtons" destination="MzB-4R-8wi" collectionClass="NSMutableArray" id="6h2-uB-36j"/>

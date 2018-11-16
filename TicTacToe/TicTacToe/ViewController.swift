@@ -40,15 +40,9 @@ class ViewController: UIViewController {
     
     var playerTurn = 1
     var statuOfGame = [[0,0,0],[0,0,0],[0,0,0]]
-//    let winningBord = [
-   
-//    let winningBord = [[0,1,2],[3,4,5],[6,7,8],
-//                       [0,3,6],[1,4,7],[2,5,8],
-//                       [0,4,8],[2,4,6]]
-  //  var gameData = false
     
     func gameData() {
-    arrOFUIButtons.forEach({ $0.isEnabled = false })
+    arrOFUIButtons.forEach({ $0.isEnabled = true })
     }
     
     override func viewDidLoad() {
@@ -75,6 +69,7 @@ class ViewController: UIViewController {
         }
         
         //for data in statuOfGame {
+        
         for playerNumber in [1,2] {
             for row in 0..<3 {
                 if statuOfGame[sender.row] == [1, 1, 1] {
@@ -88,48 +83,86 @@ class ViewController: UIViewController {
                     arrOFUIButtons.forEach{$0.isUserInteractionEnabled = false}
                 }
             }
-            for playerNumber1 in [1,2] {
-                
-                    for col in 0..<statuOfGame[0].count{
+            //column
+            for col in 0..<statuOfGame.count {
+               var colWin = [Int]()
+                    for row in 0..<statuOfGame.count{
 
+                        colWin.append(statuOfGame[row][col])
                   //  if sender.col == sender.row {
-                    if statuOfGame[sender.col] == [1, 1, 1] {
+                    if colWin == [1, 1, 1] {
                         //print("Player \(playerNumber1) wins!")
                         lable.text = " X WIN !! "
                         arrOFUIButtons.forEach{$0.isUserInteractionEnabled = false}
                 }
-                    if statuOfGame[sender.col] == [2, 2, 2] {
+                    if colWin == [2, 2, 2] {
                         //print("Player \(playerNumber1) wins!")
                         lable.text = " O WIN !! "
                         arrOFUIButtons.forEach{$0.isUserInteractionEnabled = false}
                     }
                     
             }
-            //column
-            //diagnal
-        }
             }
-//            if statuOfGame[0] == [1, 1, 1] {
-////            if statuOfGame[0][0] == 1 && statuOfGame[0][1] == statuOfGame[0][0] && statuOfGame[0][2] == statuOfGame[0][1] {
-//                gameData()
-//                if statuOfGame[sender.row][sender.col] == 1 {
-//                    //            print("x win")
-//                    lable.text = " X WIN !! "
-//                } else if statuOfGame[sender.row][sender.col] == 2 {
-//                    //            print("circle win")
-//                    lable.text = " O WIN !!"
-//                }
-//        }
-            
-//
+            //diagnal
+        var diagna = [Int]()
+            for row in 0..<statuOfGame.count{
+                for col in 0..<statuOfGame.count {
+                    if row == col {
+                        diagna.append(statuOfGame[row][col])
+                        if diagna == [1, 1, 1] {
+                            //print("Player \(playerNumber1) wins!")
+                            lable.text = " X WIN !! "
+                            arrOFUIButtons.forEach{$0.isUserInteractionEnabled = false}
+                        }
+                        if diagna == [2, 2, 2] {
+                            //print("Player \(playerNumber1) wins!")
+                            lable.text = " O WIN !! "
+                            arrOFUIButtons.forEach{$0.isUserInteractionEnabled = false}
+                        }
+                    }
+                }
+
         
-    
+            }
+            
         }
     
 }
                 
+    @IBAction func Restart(_ sender: GameButton) {
+        
+        
+        statuOfGame = [[0,0,0],[0,0,0],[0,0,0]]
+        //gameData()
+        playerTurn = 1
+        
+        for button in arrOFUIButtons {
+            button.isUserInteractionEnabled = true
+            button.imageView?.isHidden = true
+            
+        }
+        
+    }
+    
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
    // gameData = false
         
         
@@ -155,9 +188,22 @@ class ViewController: UIViewController {
 //}
 //
 //
-//}
-////if data[0] != 0 && winningData.winningBord[0] == winningData.winningBord[1] && winningData.winningBord[1] == winningData.winningBord[2] {
-////    gameData = false
 
 
 
+
+
+
+//            if statuOfGame[0] == [1, 1, 1] {
+//            if statuOfGame[0][0] == 1 && statuOfGame[0][1] == statuOfGame[0][0] && statuOfGame[0][2] == statuOfGame[0][1] {
+//                gameData()
+//                if statuOfGame[sender.row][sender.col] == 1 {
+//                    //            print("x win")
+//                    lable.text = " X WIN !! "
+//                } else if statuOfGame[sender.row][sender.col] == 2 {
+//                    //            print("circle win")
+//                    lable.text = " O WIN !!"
+//                }
+//        }
+
+//
